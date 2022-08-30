@@ -28,7 +28,7 @@ class _SharePageState extends State<SharePage> {
           backgroundColor: const Color.fromARGB(255, 13, 16, 18),
           appBar: AppBar(
             backgroundColor: Colors.blueGrey.shade900,
-            title: const Text('Share'),
+            title: const Text('Share'.tr()),
             leading: BackButton(onPressed: () {
               sharePageAlertDialog(context);
             }),
@@ -38,7 +38,7 @@ class _SharePageState extends State<SharePage> {
               children: [
                 Lottie.asset('assets/lottie/share.json'),
                 Text(
-                  '${photonSender.hasMultipleFiles ? 'Your files are ready to be shared' : 'Your file is ready to be shared'}\nAsk receiver to tap on receive button',
+                  '${photonSender.hasMultipleFiles ? 'Your files are ready to be shared' : 'Your file is ready to be shared'}\nAsk receiver to tap on receive button'.tr(),
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: width > 720 ? 18 : 14,
