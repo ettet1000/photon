@@ -69,23 +69,6 @@ class _AppState extends State<App> {
                     ),
                   ),
                   ListTile(
-                    leading: SvgPicture.asset(
-                      'assets/icons/licenses.svg',
-                      color: Colors.white,
-                    ),
-                    onTap: () {
-                      showLicensePage(
-                          context: context,
-                          applicationLegalese: 'MIT license',
-                          applicationVersion: 'v1.0.1',
-                          applicationIcon: Image.asset(
-                            'assets/images/splash.png',
-                            width: 60,
-                          ));
-                    },
-                    title: const Text('Licenses'),
-                  ),
-                  ListTile(
                     leading: const Icon(Icons.privacy_tip_rounded),
                     onTap: () async {
                       String privacyPolicy = await rootBundle
@@ -93,10 +76,10 @@ class _AppState extends State<App> {
                       // ignore: use_build_context_synchronously
                       privacyPolicyDialog(context, privacyPolicy);
                     },
-                    title: const Text('Privacy policy'),
+                    title: const Text('Privacy policy'.tr()),
                   ),
                   ListTile(
-                    title: const Text('Credits'),
+                    title: const Text('Credits'.tr()),
                     leading: SvgPicture.asset('assets/icons/credits.svg',
                         color: Colors.white),
                     onTap: () {
@@ -104,14 +87,14 @@ class _AppState extends State<App> {
                     },
                   ),
                   ListTile(
-                    title: const Text('About'),
+                    title: const Text('About'.tr()),
                     leading: const Icon(UniconsLine.info_circle),
                     onTap: () {
                       about(context);
                     },
                   ),
                   ListTile(
-                    title: const Text('Contact Me'),
+                    title: const Text('Contact Me'.tr()),
                     leading: const Icon(
                       UniconsLine.mailbox,
                     ),
