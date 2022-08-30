@@ -14,7 +14,7 @@ handleSharing(BuildContext context) async {
   if ((await PhotonSender.share(context) == true)) {
     Navigator.pushNamed(context, '/sharepage');
   } else {
-    showSnackBar(context, 'No file chosen');
+    showSnackBar(context, 'No file chosen'.tr());
   }
 }
 
