@@ -53,7 +53,7 @@ class _ReceivePageState extends State<ReceivePage> {
           backgroundColor: const Color.fromARGB(255, 13, 16, 18),
           appBar: AppBar(
             backgroundColor: Colors.blueGrey.shade900,
-            title: const Text('Scan'),
+            title: const Text('Scan'.tr()),
           ),
           body: FutureBuilder(
             future: _scan(),
@@ -72,7 +72,7 @@ class _ReceivePageState extends State<ReceivePage> {
                           Center(
                             child: Focus(
                               child: Text(
-                                'No device found\nMake sure sender & receiver are connected through mobile hotspot\nOR\nSender and Receivers are connected to same wifi\n',
+                                'No device found\nMake sure sender & receiver are connected through mobile hotspot\nOR\nSender and Receivers are connected to same wifi\n'.tr(),
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize:
@@ -91,13 +91,13 @@ class _ReceivePageState extends State<ReceivePage> {
                                 },
                                 child: const Icon(
                                   Icons.refresh_rounded,
-                                  semanticLabel: 'Re-scan',
+                                  semanticLabel: 'Re-scan'.tr(),
                                   size: 80,
                                 )),
                           ),
                           Center(
                             child: Text(
-                              'Re-Scan',
+                              'Re-Scan'.tr(),
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize:
@@ -115,7 +115,7 @@ class _ReceivePageState extends State<ReceivePage> {
                           Center(
                             child: Focus(
                               child: Text(
-                                'Waiting for sender to approve,ask sender to approve !',
+                                'Waiting for sender to approve,ask sender to approve !'.tr(),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -130,7 +130,7 @@ class _ReceivePageState extends State<ReceivePage> {
                           Card(
                             child: SizedBox(
                                 child: Text(
-                              '(Files will be saved at $dir)',
+                              '(Files will be saved at $dir)'.tr(),
                               textAlign: TextAlign.center,
                             )),
                           )
@@ -141,7 +141,7 @@ class _ReceivePageState extends State<ReceivePage> {
                           const Center(
                             child: Focus(
                               child: Text(
-                                  "Please select the 'sender' from the following list"),
+                                  "Please select the 'sender' from the following list".tr()),
                             ),
                           ),
                           ListView.builder(
@@ -186,7 +186,7 @@ class _ReceivePageState extends State<ReceivePage> {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(const SnackBar(
                                                 content: Text(
-                                                    'Access denied by the sender')));
+                                                    'Access denied by the sender'.tr())));
                                       }
                                     },
                                     child: Card(
@@ -235,7 +235,7 @@ class _ReceivePageState extends State<ReceivePage> {
                           ),
                         },
                         const Text(
-                          'Scanning ...',
+                          'Scanning ...'.tr(),
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
