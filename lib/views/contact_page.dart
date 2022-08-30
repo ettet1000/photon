@@ -15,7 +15,7 @@ class _ContactPageState extends State<ContactPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Contact Me'),
+        title: const Text('Contact Me'.tr()),
       ),
       body: Column(
         children: [
@@ -26,22 +26,14 @@ class _ContactPageState extends State<ContactPage> {
             ),
             onTap: () {
               var url = Mailto(
-                to: ['photon19dev@gmail.com'],
+                to: ['ettet1001@gmail.com'],
               ).toString();
               ulaunch.launchUrl(Uri.parse(url));
             },
-            title: const Text('Email'),
-            subtitle: const Text('photon19dev@gmail.com'),
+            title: const Text('Email'.tr()),
+            subtitle: const Text('ettet1001@gmail.com'),
           ),
-          ListTile(
-            leading: const Icon(UniconsLine.twitter, color: Colors.blueAccent),
-            onTap: () {
-              ulaunch
-                  .launchUrl(Uri.parse('https://twitter.com/AbhilashHegde9'));
-            },
-            title: const Text('Twitter'),
-            subtitle: const Text('https://twitter.com/AbhilashHegde9'),
-          )
+          
         ],
       ),
     );
