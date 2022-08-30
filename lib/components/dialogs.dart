@@ -11,7 +11,7 @@ void privacyPolicyDialog(BuildContext context, String data) {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Privacy policy'),
+          title: const Text('Privacy policy'.tr()),
           content: SizedBox(
               height: MediaQuery.of(context).size.height / 2,
               width: MediaQuery.of(context).size.height / 1.2,
@@ -21,16 +21,10 @@ void privacyPolicyDialog(BuildContext context, String data) {
                   data: data)),
           actions: [
             ElevatedButton(
-                onPressed: () async {
-                  await ulaunch.launchUrl(Uri.parse(
-                      'https://github.com/abhi16180/photon-file-transfer'));
-                },
-                child: const Text('Source-code')),
-            ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: const Text('Okay'))
+                child: const Text('Okay'.tr()))
           ],
         );
       });
@@ -41,21 +35,21 @@ progressPageAlertDialog(BuildContext context) {
     context: context,
     builder: (context) {
       return AlertDialog(
-        title: const Text('Alert'),
-        content: const Text('Make sure that transfer is completed !'),
+        title: const Text('Alert'.tr()),
+        content: const Text('Make sure that transfer is completed !'.tr()),
         actions: [
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: const Text('Stay')),
+              child: const Text('Stay'.tr())),
           ElevatedButton(
             onPressed: () async {
               // ignore: use_build_context_synchronously
               Navigator.of(context).pushNamedAndRemoveUntil(
                   '/home', (Route<dynamic> route) => false);
             },
-            child: const Text('Go back'),
+            child: const Text('Go back'.tr()),
           )
         ],
       );
@@ -69,15 +63,15 @@ progressPageWillPopDialog(context) async {
     context: context,
     builder: (context) {
       return AlertDialog(
-        title: const Text('Alert'),
-        content: const Text('Make sure that download is completed !'),
+        title: const Text('Alert'.tr()),
+        content: const Text('Make sure that download is completed !'.tr()),
         actions: [
           ElevatedButton(
               onPressed: () {
                 willPop = false;
                 Navigator.of(context).pop();
               },
-              child: const Text('Stay')),
+              child: const Text('Stay'.tr())),
           ElevatedButton(
             onPressed: () async {
               willPop = true;
@@ -85,7 +79,7 @@ progressPageWillPopDialog(context) async {
               Navigator.of(context).pushNamedAndRemoveUntil(
                   '/home', (Route<dynamic> route) => false);
             },
-            child: const Text('Go back'),
+            child: const Text('Go back'.tr()),
           )
         ],
       );
@@ -99,12 +93,12 @@ sharePageAlertDialog(BuildContext context) {
     context: context,
     builder: (context) {
       return AlertDialog(
-        title: const Text('Server alert'),
-        content: const Text('Would you like to terminate the current session'),
+        title: const Text('Server alert'.tr()),
+        content: const Text('Would you like to terminate the current session'.tr()),
         actions: [
           ElevatedButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('Stay')),
+              child: const Text('Stay'.tr())),
           ElevatedButton(
             onPressed: () async {
               await PhotonSender.closeServer(context);
@@ -113,7 +107,7 @@ sharePageAlertDialog(BuildContext context) {
                   MaterialPageRoute(builder: (context) => const App()),
                   (route) => false);
             },
-            child: const Text('Terminate'),
+            child: const Text('Terminate'.tr()),
           )
         ],
       );
@@ -127,16 +121,16 @@ sharePageWillPopDialog(context) async {
     context: context,
     builder: (context) {
       return AlertDialog(
-        title: const Text('Server alert'),
+        title: const Text('Server alert'.tr()),
         content:
-            const Text('Would you like to terminate the current session ?'),
+            const Text('Would you like to terminate the current session ?'.tr()),
         actions: [
           ElevatedButton(
               onPressed: () {
                 willPop = false;
                 Navigator.of(context).pop();
               },
-              child: const Text('Stay')),
+              child: const Text('Stay'.tr())),
           ElevatedButton(
             onPressed: () async {
               await PhotonSender.closeServer(context);
@@ -147,7 +141,7 @@ sharePageWillPopDialog(context) async {
               //     MaterialPageRoute(builder: (context) => const App()),
               //     (route) => false);
             },
-            child: const Text('Terminate'),
+            child: const Text('Terminate'.tr()),
           )
         ],
       );
@@ -162,23 +156,23 @@ senderRequestDialog(BuildContext context, String username, String os) async {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Request from receiver'),
+          title: const Text('Request from receiver'.tr()),
           content: Text(
-              "$username ($os) is requesting for files. Would you like to share with them ?"),
+              "$username ($os) is requesting for files. Would you like to share with them ?".tr()),
           actions: [
             ElevatedButton(
               onPressed: () {
                 allowRequest = false;
                 Navigator.of(context).pop();
               },
-              child: const Text('Deny'),
+              child: const Text('Deny'.tr()),
             ),
             ElevatedButton(
               onPressed: () {
                 allowRequest = true;
                 Navigator.of(context).pop();
               },
-              child: const Text('Accept'),
+              child: const Text('Accept'.tr()),
             )
           ],
         );
@@ -192,44 +186,18 @@ about(context) {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('About'),
+          title: const Text('About'.tr()),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: const [
               Text(
-                'App designed and developed\nby\nAbhilash Hegde,',
+                '',
                 textAlign: TextAlign.center,
               ),
             ],
           ),
           actionsAlignment: MainAxisAlignment.center,
           actions: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: IconButton(
-                onPressed: () async {
-                  await ulaunch
-                      .launchUrl(Uri.parse('https://github.com/abhi16180'));
-                },
-                icon: const Icon(
-                  UniconsLine.github,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: IconButton(
-                onPressed: () async {
-                  await ulaunch.launchUrl(
-                      Uri.parse('https://twitter.com/AbhilashHegde9'));
-                },
-                icon: const Icon(
-                  UniconsLine.twitter,
-                  color: Colors.blue,
-                ),
-              ),
-            ),
             IconButton(
               onPressed: () {
                 Navigator.of(context).pop();
@@ -246,13 +214,13 @@ credits(context) {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Credits'),
+          title: const Text('Credits'.tr()),
           content: SizedBox(
             width: MediaQuery.of(context).size.width / 2,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text('Icons'),
+                const Text('Icons'.tr()),
                 GestureDetector(
                   onTap: () {
                     ulaunch.launchUrl(Uri.parse('https://www.svgrepo.com'));
@@ -269,7 +237,7 @@ credits(context) {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text('Animations'),
+                const Text('Animations'.tr()),
                 GestureDetector(
                   onTap: () {
                     ulaunch.launchUrl(Uri.parse('https://lottiefiles.com/'));
@@ -286,7 +254,7 @@ credits(context) {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text('Font\nYftoowhy', textAlign: TextAlign.center),
+                const Text('Font'.tr(), textAlign: TextAlign.center),
                 GestureDetector(
                   onTap: () {
                     ulaunch.launchUrl(Uri.parse(
