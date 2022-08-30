@@ -43,7 +43,7 @@ class _WidescreenHomeState extends State<WidescreenHome> {
                     const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text(
-                        'Share',
+                        'Share'.tr(),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -72,7 +72,7 @@ class _WidescreenHomeState extends State<WidescreenHome> {
                   const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'Receive',
+                      'Receive'.tr(),
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -94,7 +94,7 @@ class _WidescreenHomeState extends State<WidescreenHome> {
           ),
           const Center(
             child: Text(
-              'Please wait !',
+              'Please wait !'.tr(),
               style: TextStyle(
                 fontSize: 20,
               ),
