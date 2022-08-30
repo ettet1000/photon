@@ -35,9 +35,9 @@ class _IntroPageState extends State<IntroPage> {
         skipOrBackFlex: 0,
         nextFlex: 0,
         showBackButton: false,
-        skip: const Text('Skip', style: TextStyle(fontWeight: FontWeight.w600)),
+        skip: const Text('Skip'.tr(), style: TextStyle(fontWeight: FontWeight.w600)),
         next: const Icon(Icons.arrow_forward),
-        done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
+        done: const Text('Done'.tr(), style: TextStyle(fontWeight: FontWeight.w600)),
         curve: Curves.fastLinearToSlowEaseIn,
         controlsMargin: const EdgeInsets.all(16),
         controlsPadding: kIsWeb
@@ -89,7 +89,7 @@ class _IntroPageState extends State<IntroPage> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'Welcome to Photon ,\n Transfer files seamlessly across your devices.\n(No internet connection is required)',
+                          'Welcome to Photon ,\n Transfer files seamlessly across your devices.\n(No internet connection is required)'.tr(),
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: MediaQuery.of(context).size.width > 720
@@ -124,7 +124,7 @@ class _IntroPageState extends State<IntroPage> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Photon is open source cross-platform application.\nSupports High-speed cross-platform data transfer \n',
+                        'Photon is cross-platform application.\nSupports High-speed cross-platform data transfer \n'.tr(),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize:
@@ -158,7 +158,7 @@ class _IntroPageState extends State<IntroPage> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Before using make sure that,\nSender and receivers are connected to same wifi router \n OR \n Connected via mobile-hotspot\n',
+                        'Before using make sure that,\nSender and receivers are connected to same wifi router \n OR \n Connected via mobile-hotspot\n'.tr(),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize:
