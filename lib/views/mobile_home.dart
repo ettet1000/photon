@@ -44,7 +44,7 @@ class _MobileHomeState extends State<MobileHome> {
                   const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'Share',
+                      'Share'.tr(),
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -73,7 +73,7 @@ class _MobileHomeState extends State<MobileHome> {
                   const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'Receive',
+                      'Receive'.tr(),
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -97,7 +97,7 @@ class _MobileHomeState extends State<MobileHome> {
           ),
           const Center(
             child: Text(
-              'Please wait !',
+              'Please wait !'.tr(),
               style: TextStyle(
                 fontSize: 18,
               ),
