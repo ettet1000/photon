@@ -48,7 +48,7 @@ class _ProgressPageState extends State<ProgressPage> {
         appBar: AppBar(
           backgroundColor: Colors.blueGrey.shade900,
           title: const Text(
-            ' Receiving',
+            ' Receiving'.tr(),
           ),
           leading: BackButton(
             onPressed: () {
@@ -124,8 +124,8 @@ class _ProgressPageState extends State<ProgressPage> {
                                         padding: const EdgeInsets.all(0.0),
                                         child: Text(getInstance
                                                 .isCancelled[item].value
-                                            ? 'Cancelled'
-                                            : '${(getInstance.percentage[item] as RxDouble)} %'),
+                                            ? 'Cancelled'.tr()
+                                            : '${(getInstance.percentage[item] as RxDouble)} %'.tr()),
                                       ),
                                     ],
                                   ),
@@ -138,7 +138,7 @@ class _ProgressPageState extends State<ProgressPage> {
                                         padding: EdgeInsets.all(0),
                                         child: Icon(
                                           Icons.refresh,
-                                          semanticLabel: 'Restart',
+                                          semanticLabel: 'Restart'.tr(),
                                         ),
                                       ),
                                       onPressed: () {
@@ -158,7 +158,7 @@ class _ProgressPageState extends State<ProgressPage> {
                                         padding: EdgeInsets.all(0.0),
                                         child: Icon(
                                           Icons.cancel,
-                                          semanticLabel: 'Cancel receive',
+                                          semanticLabel: 'Cancel receive'.tr(),
                                         ),
                                       ),
                                       onPressed: () {
@@ -189,7 +189,7 @@ class _ProgressPageState extends State<ProgressPage> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     height: 200,
-                    child: const Text('Something went wrong'),
+                    child: const Text('Something went wrong'.tr()),
                   ),
                 ),
               );
@@ -221,7 +221,7 @@ class _ProgressPageState extends State<ProgressPage> {
         } catch (e) {
           // ignore: use_build_context_synchronously
           ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Unable to open the file')));
+              const SnackBar(content: Text('Unable to open the file'.tr())));
         }
       }
     } catch (_) {
